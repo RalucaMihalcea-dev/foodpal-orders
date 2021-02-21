@@ -72,5 +72,11 @@ namespace FoodPal.Orders.Data.Repositories
 			orderEntity.Status = newStatus;
 			await _ordersContext.SaveChangesAsync();
 		}
-	}
+
+        public async Task<DeliveryDetails?> GetDeliveryDetailsByOrderIdAsync(int orderId)
+        {
+			var deliveryDetails = await _ordersContext.Orders.Where(x => x.Id == orderId).Select(x => x.DeliveryDetails).ToListAsync();
+			return deliveryDetails.FirstOrDefault();
+		}
+    }
 }

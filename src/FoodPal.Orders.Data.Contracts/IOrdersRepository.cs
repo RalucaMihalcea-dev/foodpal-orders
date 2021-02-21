@@ -21,16 +21,17 @@ namespace FoodPal.Orders.Data.Contracts
 		/// <returns>The order result.</returns>
 		/// <remarks>If no order is found, null is returned.</remarks>
 		Task<Order> GetByIdAsync(int orderId);
+        Task<DeliveryDetails?> GetDeliveryDetailsByOrderIdAsync(int orderId);
 
-		/// <summary>
-		/// Returns all orders by customer id and order status (if specified)
-		/// </summary>
-		/// <param name="customerId">The customer id.</param>
-		/// <param name="status">The order status, optional.</param>
-		/// <param name="page">Result page.</param>
-		/// <param name="pageSize">Result page size.</param>
-		/// <returns>The requested page containing the orders specified by filters (customer id and order status).</returns>
-		Task<(IEnumerable<Order> Orders, int AllOrdersCount)> GetByFiltersAsync(string customerId, OrderStatus? status, int page, int pageSize);
+        /// <summary>
+        /// Returns all orders by customer id and order status (if specified)
+        /// </summary>
+        /// <param name="customerId">The customer id.</param>
+        /// <param name="status">The order status, optional.</param>
+        /// <param name="page">Result page.</param>
+        /// <param name="pageSize">Result page size.</param>
+        /// <returns>The requested page containing the orders specified by filters (customer id and order status).</returns>
+        Task<(IEnumerable<Order> Orders, int AllOrdersCount)> GetByFiltersAsync(string customerId, OrderStatus? status, int page, int pageSize);
 
 		/// <summary>
 		/// Returns order status.
