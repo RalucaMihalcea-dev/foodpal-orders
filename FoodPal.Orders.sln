@@ -33,11 +33,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodPal.Orders.MessageBroke
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodPal.Orders.Exceptions", "src\FoodPal.Orders.Exceptions\FoodPal.Orders.Exceptions.csproj", "{8FEB8235-8947-4C43-ABFD-BFA075D7E9A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodPal.Orders.BackgroundWorkers", "src\FoodPal.Orders.BackgroundWorkers\FoodPal.Orders.BackgroundWorkers.csproj", "{214A097E-8E0C-4777-A2CA-405ED3E2847B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodPal.Orders.BackgroundWorkers", "src\FoodPal.Orders.BackgroundWorkers\FoodPal.Orders.BackgroundWorkers.csproj", "{214A097E-8E0C-4777-A2CA-405ED3E2847B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodPal.Orders.BackgroundServices", "src\FoodPal.Orders.BackgroundServices\FoodPal.Orders.BackgroundServices.csproj", "{9BF1B70F-EEB1-4B35-991C-8E4DEBCAEC50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodPal.Orders.BackgroundServices", "src\FoodPal.Orders.BackgroundServices\FoodPal.Orders.BackgroundServices.csproj", "{9BF1B70F-EEB1-4B35-991C-8E4DEBCAEC50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodPal.Orders.Mappers", "src\FoodPal.Orders.Mappers\FoodPal.Orders.Mappers.csproj", "{E981D130-86A7-465D-B332-521810F18082}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodPal.Orders.Mappers", "src\FoodPal.Orders.Mappers\FoodPal.Orders.Mappers.csproj", "{E981D130-86A7-465D-B332-521810F18082}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodPal.Orders.Mock.MessageBroker", "src\foodpal-orders-mocks-main\src\FoodPal.Orders.Mock.MessageBroker\FoodPal.Orders.Mock.MessageBroker.csproj", "{E22FDD8F-17FF-4876-BCF7-A9A4020EB919}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodPal.Orders.Mock.Dtos", "src\foodpal-orders-mocks-main\src\FoodPal.Orders.Mock.Dtos\FoodPal.Orders.Mock.Dtos.csproj", "{6108B000-76B8-47B7-8699-7F5A913DF118}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodPal.Orders.Mock.ChefsExperience.Api", "src\foodpal-orders-mocks-main\src\FoodPal.Orders.Mock.ChefsExperience.Api\FoodPal.Orders.Mock.ChefsExperience.Api.csproj", "{E9F431D2-7D0B-4145-8EC7-31D6B0916BE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodPal.Orders.Mock.BackgroundServices", "src\foodpal-orders-mocks-main\src\FoodPal.Orders.Mock.BackgroundServices\FoodPal.Orders.Mock.BackgroundServices.csproj", "{2437BE74-1A99-4915-ADD4-73AB5385BB68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,6 +109,22 @@ Global
 		{E981D130-86A7-465D-B332-521810F18082}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E981D130-86A7-465D-B332-521810F18082}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E981D130-86A7-465D-B332-521810F18082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E22FDD8F-17FF-4876-BCF7-A9A4020EB919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E22FDD8F-17FF-4876-BCF7-A9A4020EB919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E22FDD8F-17FF-4876-BCF7-A9A4020EB919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E22FDD8F-17FF-4876-BCF7-A9A4020EB919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6108B000-76B8-47B7-8699-7F5A913DF118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6108B000-76B8-47B7-8699-7F5A913DF118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6108B000-76B8-47B7-8699-7F5A913DF118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6108B000-76B8-47B7-8699-7F5A913DF118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9F431D2-7D0B-4145-8EC7-31D6B0916BE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9F431D2-7D0B-4145-8EC7-31D6B0916BE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9F431D2-7D0B-4145-8EC7-31D6B0916BE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9F431D2-7D0B-4145-8EC7-31D6B0916BE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2437BE74-1A99-4915-ADD4-73AB5385BB68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2437BE74-1A99-4915-ADD4-73AB5385BB68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2437BE74-1A99-4915-ADD4-73AB5385BB68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2437BE74-1A99-4915-ADD4-73AB5385BB68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

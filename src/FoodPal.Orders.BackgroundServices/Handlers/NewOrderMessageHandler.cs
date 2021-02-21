@@ -46,12 +46,17 @@ namespace FoodPal.Orders.BackgroundServices.Handlers
 				{
 					case "xyz":
 					case "kfc":
+					case "prestopizza":
 						await SendOrderRequestToProviderViaMessageBrokerAsync(providerItems.Key.ToLower(), persistedOrder.Id, providerItems.Value);
 						await UpdateOrderItemsStatus(providerItems.Value);
 						break;
 
 					case "chefsexperience":
 						await SendOrderRequestToProviderViaHttpAsync(_httpProviderEndpoints.ChefsExperienceBaseEndpoint, persistedOrder.Id, providerItems.Value);
+						await UpdateOrderItemsStatus(providerItems.Value);
+						break;
+					case "greekcuisine":
+						await SendOrderRequestToProviderViaHttpAsync(_httpProviderEndpoints.GreekCuisineBaseEndpoint, persistedOrder.Id, providerItems.Value);
 						await UpdateOrderItemsStatus(providerItems.Value);
 						break;
 

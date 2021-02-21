@@ -36,7 +36,9 @@ namespace FoodPal.Orders.BackgroundWorkers
 				new OrdersUnitOfWork(sp.GetService<IOrdersContextFactory>().CreateDbContext(dbConnectionString)));
 
 			services.AddHostedService<NewOrderWorker>();
+			services.AddHostedService<XyzProviderOrderItemsWorker>();
 			services.AddHostedService<KfcProviderOrderItemsWorker>();
+			services.AddHostedService<PrestoPizzaProviderOrderItemsWorker>();
 		}
 	}
 }
