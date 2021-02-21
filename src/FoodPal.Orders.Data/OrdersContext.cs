@@ -1,9 +1,6 @@
 ﻿using FoodPal.Orders.Data.Configurations;
 using FoodPal.Orders.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace FoodPal.Orders.Data
 {
@@ -17,11 +14,12 @@ namespace FoodPal.Orders.Data
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
+			modelBuilder.ApplyConfigurationsFromAssembly(typeof(OrderEntityTypeConfiguration).Assembly);
+
+			// Alternative configuration:
 			//modelBuilder.ApplyConfiguration<Order>(new OrderEntityTypeConfiguration());
 			//modelBuilder.ApplyConfiguration<Order>(new OrderItemEntityTypeConfiguration());
 			//modelBuilder.ApplyConfiguration<Order>(new DeliveryDetailsEntityTypeConfiguration());
-
-			modelBuilder.ApplyConfigurationsFromAssembly(typeof(OrderEntityTypeConfiguration).Assembly);
 		}
 	}
 }
